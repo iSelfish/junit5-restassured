@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(platform("org.junit:junit-bom:5.9.0"))
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation "org.junit.platform:junit-platform-suite"
+    testImplementation 'io.rest-assured:rest-assured:5.2.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
